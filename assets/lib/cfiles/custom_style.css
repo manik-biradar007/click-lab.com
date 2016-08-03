@@ -60,7 +60,7 @@ article section::after {
 }
 
 .h_banner_bg {
-    background: url('../../../../../wp-content/uploads/2016/06/BG_home-1.jpg') center center no-repeat;
+    background: url('../../../assets/images/BG_home-1.jpg') center center no-repeat;
     height: 100%;
     width: 100%;
     webkit-background-size: cover;
@@ -2060,7 +2060,7 @@ img {
 }
 
 .prnt_footer_sec {
-    background: rgba(22, 25, 29, 0.9) url(../../../../../wp-content/uploads/2016/06/Footer-Image.jpg) center center no-repeat fixed;
+    background: rgba(22, 25, 29, 0.9) url(../../../assets/images/Footer-Image.jpg) center center no-repeat fixed;
     background-size: cover
 }
 
@@ -2155,7 +2155,7 @@ section#footer-widgets {
 .jg_popup_map_bg {
     max-width: 800px;
     height: 400px;
-    background: url(../../../../../wp-content/uploads/2016/06/cta_map.png) 0 0 no-repeat;
+    background: url(../../../assets/images/cta_map.png) 0 0 no-repeat;
     margin: 0 auto;
     position: relative;
     background-size: contain
@@ -2754,7 +2754,7 @@ section#footer-widgets {
         margin-bottom: 3px
     }
     .cl_fixed_nav h3.nav-toggle {
-        background: url(../../../../../assets/images/ico-menu.png) no-repeat;
+        background: url(../../../assets/images/ico-menu.png) no-repeat;
         width: 25px;
         display: block;
         color: #424242;
