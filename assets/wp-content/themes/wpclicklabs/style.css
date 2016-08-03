@@ -211,7 +211,7 @@ ul.nav li.li.current-menu-item a{color:#40B9BC;}
 #header #logo a{float:left;margin:0 0 1.618em;}
 #header #logo a:active{margin-top:.53em;}
 #header #logo .nav-toggle{float:none;background-color:#f2f2f2;padding:.382em;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;clear:both;overflow:hidden;}
-#header #logo .nav-toggle a{background:url(images/ico-menu.png) no-repeat center left;width:5.874em;display:block;margin:.236em auto;float:none;font-size:.857em;padding-left:2.618em;color:#424242;}
+#header #logo .nav-toggle a{background:url(../../../../assets/images/ico-menu.png) no-repeat center left;width:5.874em;display:block;margin:.236em auto;float:none;font-size:.857em;padding-left:2.618em;color:#424242;}
 #header #main-nav{float:none;border:1px solid #e6e6e6;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:1em 1.618em;}
 #header #main-nav li{list-style:none;}
 #header #main-nav li a{padding-left:0;}
