@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Click Labs | tech done right</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type='text/javascript' src='assets/wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='assets/wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+    <script type='text/javascript' src='assets/wp-content/themes/wpclicklabs/includes/js/third-party62d0.js?ver=4.5.3'></script>
+    <script src="assets/wp-content/themes/wpclicklabs/cfiles/nprogress.js"></script>
+    <script type="text/javascript" src="assets/wp-content/themes/wpclicklabs/cfiles/jquery.cookie.js"></script>
+    <script async src="assets/wp-content/themes/wpclicklabs/cfiles/jquery.bpopup.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="assets/wp-content/themes/wpclicklabs/style.css" media="screen" />
+    <link rel='stylesheet' id='woo-layout-css' href='assets/wp-content/themes/wpclicklabs/css/layout62d0.css?ver=4.5.3' type='text/css' media='all' />
+    <link href="assets/wp-content/themes/wpclicklabs/styles/default.css" rel="stylesheet" type="text/css" />
+    <link href="assets/wp-content/themes/wpclicklabs/functions/css/shortcodes.css" rel="stylesheet" type="text/css" />
+    <link href="assets/wp-content/themes/wpclicklabs/custom.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="assets/wp-content/themes/wpclicklabs/cfiles/custom_style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="assets/wp-content/themes/wpclicklabs/cfiles/nprogress.css" media="screen" />
+
+    <script type="text/javascript">
+        $ = jQuery;
+        screen_w = jQuery(window).width();
+        screen_h = jQuery(window).height();
+
+        jQuery(document).ready(function() {
+            if (jQuery(window).width() >= 768) {
+                jQuery('.h_banner, .h_banner_bg_p, .cl_h_sec5_popup').css({
+                    'height': screen_h,
+                    'width': '100%'
+                });
+                jQuery('.full_screen').css({
+                    'height': jQuery(window).height() - 0,
+                    'width': jQuery(window).width()
+                });
+
+                jQuery(window).resize(function() {
+                    screen_w = jQuery(window).width();
+                    screen_h = jQuery(window).height();
+
+                    jQuery('.h_banner, .h_banner_bg_p, .cl_h_sec5_popup').css({
+                        'height': screen_h,
+                        'width': '100%'
+                    });
+                    jQuery('.full_screen').css({
+                        'height': jQuery(window).height() - 0,
+                        'width': jQuery(window).width()
+                    });
+
+                    if (jQuery(window).width() == 768) {
+                        jQuery('#main-nav').addClass('main_nav_desktop');
+                    } else {
+                        jQuery('#main-nav').removeClass('main_nav_desktop');
+                    }
+
+                });
+            }
+
+            jQuery('.cl_fixed_nav').addClass('cl_H_fixed_nav bg_white box_shw');
+            jQuery(".cl_fixed_nav #logo img").removeClass('animated fadeInDown');
+            jQuery(".cl_fixed_nav #main-nav").removeClass('animated fadeInUp');
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                //var reduced_h1 = $(window).height() - 10;
+                var reduced_h1 = 60;
+                if ($(window).scrollTop() > reduced_h1) {
+                    //$('#header-wrap').css('opacity',1);
+                    jQuery(".home .cl_fixed_nav, .nav_h_type .cl_fixed_nav").removeClass('cl_H_fixed_nav');
+                    jQuery(".page-id-86 .cl_fixed_nav").removeClass('cl_H_fixed_nav');
+                    jQuery(".page-id-16 .cl_fixed_nav").removeClass('cl_H_fixed_nav');
+                } else {
+                    //$('#header-wrap').css('opacity',0);   
+                    jQuery('.home .cl_fixed_nav, .nav_h_type .cl_fixed_nav').addClass('cl_H_fixed_nav');
+                    jQuery('.page-id-86 .cl_fixed_nav').addClass('cl_H_fixed_nav');
+                    jQuery('.page-id-16 .cl_fixed_nav').addClass('cl_H_fixed_nav');
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body class="home page page-id-12 page-template page-template-home_temp page-template-home_temp-php unknown alt-style-default layout-full">
+    <style type="text/css">
+        #img_loader {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+        }
+        #img_loader img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    </style>
+    <div id="wrapper" class="fixed_nav nav_h_type loader_new out">
+        <section class="cl_top_bar">
+            <a class="pusher animatedClick" data-target="clickAnimate"> <span></span> <span></span> <span></span> </a>
+        </section>
+        <nav class='cl_fixed_nav open' style="display:none;">
+            <div class="col-full">
+                <div class='bg-cover'>
+                    <div class="" id="menu">
+                        <div id="logo" class="cl_logo">
+                            <a id="logo" href="#top" title="tech done right">
+                                <img class="clickAnimate logo_black_cl" src="assets/wp-content/uploads/2016/06/logo_fixed.png" alt="Click Labs" />
+                                <img style="display:none;" class="clickAnimate logo_white_cl" src="assets/wp-content/uploads/2016/06/CL-logo-white.png" alt="Click Labs" />
+                            </a>
+                            <hgroup>
+                                <h3 class="nav-toggle"><a href="#navigation">Navigation</a></h3>
+                            </hgroup>
+                        </div>
+                        <ul id="main-nav" class="nav fl clickAnimate">
+                            <li id="menu-item-73" class="fancy_scroll menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-73"><a href="index.html#Products">Products</a>
+                            </li>
+                            <li id="menu-item-12420" class="fancy_scroll menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-12420"><a href="index.html#Work">Work</a>
+                            </li>
+                            <li id="menu-item-12419" class="fancy_scroll menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-12419"><a href="index.html#Our-Process">Process</a>
+                            </li>
+                            <li id="menu-item-12428" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12428"><a  href="">Careers</a>
+                            </li>
+                            <li id="menu-item-11590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11590"><a href="blog/index.html">Blog</a>
+                            </li>
+                            <li id="menu-item-84" class="jg_click_popup jg_nav_cta_btn menu-item menu-item-type-custom menu-item-object-custom menu-item-84"><a>Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <article class="post-12 page type-page status-publish hentry" style="margin: 0;">
+
+            <div class="home_temp">
+
+                <section class="h_banner">
+                    <div class="h_banner_bg_p">
+                        <div class="h_banner_bg"></div>
+                    </div>
+                    <div class="h_banner_shdw">
+                        <div class="col-full">
+                            <div class="banner_table">
+                                <div class="banner_tableCell">
+                                    <h1>tech done right</h1>
+                                    <h5>We help you move from Zero to One without reinventing the wheel</h5>
+                                    <div class="jg_banner_gitbtn"><a class="jg_c_popup jg_click_popup" style="pointer-events: auto;">Get In Touch</a>
+                                    </div>
+                                </div>
+                                <div class="banner_tableCell_btm" style="">
+                                    <p class="fancy_scroll" style=""><a class="" href="index.html#Products" style="color:#FFF !important;">Learn more about what we do <span style="transform: rotate(7deg);">&#10095;</span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <script type="text/javascript">
+                    jQuery(document).ready(function() {
+                        NProgress.done();
+                        jQuery('#img_loader').hide();
+                        jQuery('.loader_new').removeClass('out');
+                    });
+                </script>
+                <section id="Products" class="cl_h_sec3" style="background:#F4F4F4;">
+                    <div class="col-full">
+                        <h3 style="text-align:center;">Products</h3>
+                        <h5 style="text-align:center;">Different approaches to platform development centered around creating real value for you depending on the stage/nature/scale of your idea</h5>
+                        <div class="j_h_products_sec">
+                            <div id="j_h_products_slider1" class="j_h_products_slider current_p">
+                                <div class="j_h_products_slider_l lazy_a" data-original="wp-content/uploads/2016/06/2.jpg" ></div>
+                                <div class="j_h_products_slider_r">
+                                    <article>
+                                        <h3>Juggernaut</h3>
+                                        <p>We develop On Demand Platforms for entrepreneur and enterprise level initiatives that are disrupting industry value chains across different verticals</p>
+                                        <div class="j_h_p_s_btn"><a >Learn More</a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div id="j_h_products_slider2" class="j_h_products_slider" style="display:none;">
+                                <div class="j_h_products_slider_l" style="background-image:url('assets/wp-content/uploads/2016/06/3.jpg');"></div>
+                                <div class="j_h_products_slider_r">
+                                    <article>
+                                        <h3>Tookan</h3>
+                                        <p>Simple, Powerful and highly flexible Platform to manage your mobile workforce</p>
+                                        <div class="j_h_p_s_btn"><a href="http://tookanapp.com/" >Learn More</a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div id="j_h_products_slider3" class="j_h_products_slider" style="display:none;">
+                                <div class="j_h_products_slider_l" style="background:url(assets/wp-content/uploads/2016/06/1.jpg) no-repeat center center;"></div>
+                                <div class="j_h_products_slider_r">
+                                    <article>
+                                        <h3>Taxi Hawk</h3>
+                                        <p>Comprehensive suite of automated mobile and web-based scheduling and dispatch software to take your ground transportation business to the new era</p>
+                                        <div class="j_h_p_s_btn"><a href="http://taxi-hawk.com/" >Learn More</a>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="j_h_p_s_NP_btn">
+                            <div class="j_h_p_s_Prev">
+                                <div>&Delta;</div>
+                            </div>
+                            <div class="j_h_p_s_Next">
+                                <div>&Delta;</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="Work" style="padding:0; margin:0;">
+                    <div class="home_temp work_l_page">
+                        <article id="Portfolio">
+                            <section class="cl_h_sec5" style="padding-bottom:0;">
+                                <div class="col-full">
+                                    <h3 style="text-align:center;">Work</h3>
+                                    <h5 style="text-align:center;margin-bottom: 40px;">We have powered more than 100 platforms in the past 5 <span>years, here are our hand-picks</span></h5>
+                                </div>
+                                <ul class="work-list1">
+                                    <li>
+                                        <a href="case-study-jugnoo/index.html">
+                                            <div class="bg1 lazy_a" data-original="uploads/2015/07/Jugnoo.jpg" ></div>
+                                            <div class="bg2"></div>
+                                            <i class="i1">
+                                            <div>
+                                                <img class="lazy_a" data-original="uploads/2016/04/jugnoo_final.png"  alt="Nowness" width="100">
+                                                    <p>Auto Rickshaw on Demand</p>
+                                                </div>
+                                                </i>
+                                            <i class="i2">
+                                            <div>
+                                                <p>Reliable and affordable auto rides on demand</p>
+                                            </div>
+                                            </i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="case-study-iggbo/index.html">
+                                            <div class="bg1 lazy_a" data-original="wp-content/uploads/2016/06/iggbo.jpg" ></div>
+                                            <div class="bg2"></div>
+                                            <i class="i1"><div>
+                                            <img class="lazy_a" data-original="wp-content/uploads/2016/04/iggbo-final.png"  alt="Nowness" width="168">
+                                            <p>Laboratory Testing</p>
+                                            </div></i>
+                                            <i class="i2"><div>
+                                            <p>A four sided marketplace set out to revolutionize phlebotomy</p>
+                                            </div></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="capital-one/index.html">
+                                            <div class="bg1 lazy_a" data-original="wp-content/uploads/2016/06/Capitalone.jpg" ></div>
+                                            <div class="bg2"></div>
+                                            <i class="i1"><div>
+                                            <img class="lazy_a" data-original="wp-content/uploads/2016/04/capital-one-final.png"  alt="Nowness" width="124">
+                                            <p>ATM on Wheels</p>
+                                            </div></i>
+                                            <i class="i2"><div><p>On-demand ATMs that solve cash shortage on site</p></div></i>
+                                        </a>
+                                    </li>
+                            </section>
+                        </article>
+                    </div>
+                </section>
+
+
+                <section id="Our-Process" class="cl_enterpreneur_sec4" style="background: #f2f2f2;">
+                    <div class="col-full">
+                        <h3>Our Process</h3>
+                        <p>If you are building a platform and are in it for a long haul we are here to help you through different stages of evolution - validation, efficiency and scale.</p>
+                        <div class="bg-line">
+                            <div class="secure three-div-col">
+                                <div class="mrg-btm-25">
+                                    <h4>01</h4>
+                                    <img class="lazy_a" data-original="wp-content/uploads/2016/06/security.png" alt="">
+                                    <p> Security</p>
+                                    <span>Your IP is of utmost importance to us. All of our discussions begin with an NDA.</span>
+                                </div>
+                            </div>
+                            <div class="initial three-div-col">
+                                <div class="mrg-btm-25">
+                                    <h4>02</h4>
+                                    <img class="lazy_a" data-original="wp-content/uploads/2016/06/initialchat.png" alt="">
+                                    <p> Initial Chat</p>
+                                    <span>You can discuss your idea without any commitment. We understand you might just be window shopping.</span>
+                                </div>
+                            </div>
+                            <div class="consultation three-div-col">
+                                <div class="mrg-btm-25">
+                                    <h4>03</h4>
+                                    <img class="lazy_a" data-original="wp-content/uploads/2016/06/consultation.png" alt="">
+                                    <p> Consultation</p>
+                                    <span>Using your expertise we would help you brainstorm all aspects of your business model from customer acquisition to unit economics. </span>
+                                </div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                        <div class="bg-line">
+                            <div class="secure three-div-col">
+                                <div class="mrg-btm-25">
+                                    <h4>04</h4>
+                                    <img class="lazy_a" data-original="wp-content/uploads/2016/06/followupcat.png" alt="">
+                                    <p> Follow-UP Chat</p>
+                                    <span>Based on the Business Model, we finalise the necessary features of the technology to help bring your idea to life.</span>
+                                </div>
+                            </div>
+                            <div class="initial three-div-col">
+                                <div class="mrg-btm-25">
+                                    <h4>05</h4>
+                                    <img class="lazy_a" data-original="wp-content/uploads/2016/06/totalcontrol.png" alt="">
+                                    <p> Total Control</p>
+                                    <span>Zero Outsourcing, complete control and maximum flexibility allow you and your team to call the shots at every level.</span>
+                                </div>
+                            </div>
+                            <div class="consultation three-div-col">
+                                <div class="mrg-btm-25">
+                                    <h4>06</h4>
+                                    <img class="lazy_a" data-original="wp-content/uploads/2016/06/postlaunchservice.png" alt="">
+                                    <p> Post Launch Service</p>
+                                    <span>We stick with you after launch, as we understand that this is just the first step in the process.</span>
+                                </div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="Cta" class="cl_h_sec7" style="background:#fff;padding-top: 80px;padding-bottom: 60px;">
+                    <div class="col-full">
+                        <h3><span class="">Let’s explore the possibility of a partnership</span></h3>
+                        <div class="jg_bottom_gitbtn"><a class="jg_bottom_cta jg_click_popup" style="pointer-events: auto;">Get In Touch</a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </article>
+        <script src="assets/wp-content/themes/wpclicklabs/cfiles/fancybox/jquery.fancybox.min.js"></script>
+
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                jQuery('.profilebox').fancybox({
+                    scrolling: 'yes'
+                });
+
+            });
+        </script>
+        <noscript id="deferred-styles">
+            <link rel="stylesheet" type="text/css" href="assets/wp-content/themes/wpclicklabs/cfiles/fancybox/jquery.fancybox.css" media="screen" />
+            <link rel="stylesheet" href="assets/wp-content/themes/wpclicklabs/cfiles/home_v516/about_ext3cbf.css?v2.3" />
+            <link rel="stylesheet" href="assets/wp-content/themes/wpclicklabs/cfiles/home_v516/home_work_secff3e.css?v1.0" />
+        </noscript>
+        <script>
+            var loadDeferredStyles = function() {
+                var addStylesNode = document.getElementById("deferred-styles");
+                var replacement = document.createElement("div");
+                replacement.innerHTML = addStylesNode.textContent;
+                document.body.appendChild(replacement)
+                addStylesNode.parentElement.removeChild(addStylesNode);
+            };
+            var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                webkitRequestAnimationFrame || msRequestAnimationFrame;
+            if (raf) raf(function() {
+                window.setTimeout(loadDeferredStyles, 0);
+            });
+            else window.addEventListener('load', loadDeferredStyles);
+        </script>
+        <div class="prnt_footer_sec">
+            <div class="prnt_footer_sec_overlay">
+                <div id="footer-wrap">
+                    <section id="footer-widgets" class="col-full col-4 fix">
+                        <div class="block footer-widget-1">
+                            <div id="text-12" class="widget widget_text">
+                                <h3>About Us</h3>
+                                <div class="textwidget">We are market leaders in delivering mobility solutions to entrepreneurs and enterprises looking to provide an omni channel experience to their customers. Our mission is to engineer and maximize mobile ROI.</div>
+                            </div>
+                        </div>
+                        <div class="block footer-widget-2">
+                            <div id="nav_menu-3" class="widget widget_nav_menu">
+                                <h3>Products</h3>
+                                <div class="menu-products-container">
+                                    <ul id="menu-products" class="menu">
+                                        <li id="menu-item-54" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-54"><a  href="">Juggernaut</a>
+                                        </li>
+                                        <li id="menu-item-55" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55"><a  href="">Tookan</a>
+                                        </li>
+                                        <li id="menu-item-56" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-56"><a  href="">Taxi Hawk</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block footer-widget-3">
+                            <div id="nav_menu-5" class="widget widget_nav_menu">
+                                <h3>Download</h3>
+                                <div class="menu-footer-download-container">
+                                    <ul id="menu-footer-download" class="menu">
+                                        <li id="menu-item-12424" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12424"><a  href="download/add.pdf">Corporate Brochure</a>
+                                        </li>
+                                        <li id="menu-item-12425" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12425"><a  href="download/add.pdf">Engagement Process</a>
+                                        </li>
+                                        <li id="menu-item-12426" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12426"><a  href="download/add.pdf">Security &#038; Scalability</a>
+                                        </li>
+                                        <li id="menu-item-12427" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12427"><a  href="download/add.pdf">Custom Mobile Solutions for Beauty</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block footer-widget-4">
+                            <div id="text-13" class="widget widget_text">
+                                <h3>Contact Us</h3>
+                                <div class="textwidget">
+                                    <style type="text/css">
+                                        #footer_git_exp1,
+                                        #footer_git_exp2 {
+                                            display: none;
+                                        }
+                                        .footer_git_exp {
+                                            cursor: pointer;
+                                            font-size: 16px;
+                                            font-weight: bold;
+                                            margin-bottom: 12px;
+                                        }
+                                        .footer_git_exp span::after {
+                                            content: "+";
+                                            display: inline-block;
+                                            border: 1px solid #FFF;
+                                            border-radius: 50%;
+                                            width: 20px;
+                                            height: 20px;
+                                            line-height: 18px;
+                                            font-size: 18px;
+                                            text-align: center;
+                                            margin-right: 10px;
+                                        }
+                                        .footer_git_exp_active span::after {
+                                            content: "-";
+                                        }
+                                        .footer_git_exp_active {
+                                            pointer-events: none;
+                                        }
+                                    </style>
+                                    <script type="text/javascript">
+                                        jQuery(document).ready(function() {
+                                            jQuery(".footer_git_exp").click(function() {
+                                                jQuery(".footer_git_exp").removeClass('footer_git_exp_active');
+                                                jQuery(this).addClass("footer_git_exp_active");
+                                                jQuery(".footer_git_exp_det").slideUp();
+                                                var selected_tab2 = jQuery(this).attr("rel");
+                                                jQuery('#' + selected_tab2).slideDown(800);
+                                                //jQuery('#'+selected_tab2).slideToggle( "slow" )
+                                                return false;
+                                            });
+                                        });
+                                    </script>
+                                    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                        <div rel="footer_git_exp1" id="" class="footer_git_exp"><span></span> USA</div>
+                                        <p class="footer_git_exp_det" id="footer_git_exp1" style="margin-left:10px; line-height: 24px;">
+                                            <span itemprop="streetAddress">388 Market Street<br>Suite 1300, San Francisco</span>
+                                            <br> CA &nbsp;<span itemprop="postalCode">94111</span>, <span itemprop="addressLocality">USA</span>
+                                            <br>
+                                            <br>
+                                            <span itemprop="streetAddress">315, Montgomery Street<br>8th Floor, San Francisco</span>
+                                            <br> CA &nbsp;<span itemprop="postalCode">94104</span>, <span itemprop="addressLocality">USA</span>
+                                            <br> Phone: <span itemprop="telephone">+1 206-257-2964 (US)</span>
+                                            <br/>
+                                            <span itemprop="telephone" style="padding-left: 48px;">+44 203-621-6223 (UK)</span>
+                                        </p>
+                                        <div rel="footer_git_exp2" class="footer_git_exp"><span></span> India</div>
+                                        <p class="footer_git_exp_det" id="footer_git_exp2" style="margin-left:10px; margin-top:-2px; line-height: 24px;">
+                                            Sector 28-B, Madhya Marg
+                                            <br> Chandigarh, INDIA
+                                            <br> Phone: +91-172-265-9902</p>
+                                        <p style="margin: 0;">Email: <a href="mailto:contact@click-labs.com" itemprop="email" style="text-decoration: underline;">contact@click-labs.com</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </section>
+                </div>
+                <footer id="footer" class="col-full">
+                    <div id="copyright" class="col-left">
+                        Click Labs © 2016. All Rights Reserved. </div>
+                    <div id="credit" class="col-right">
+                        <a style="font-size: 15px;color: #FFF;text-decoration: none" href="">Careers</a> | <a style="font-size: 15px;color: #FFF;text-decoration: none" href="blog/index.html">Blog</a> | <a style="font-size: 15px;color: #FFF;text-decoration: none" href="privacy-policy/index.html">Privacy Policy</a> </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <style type="text/css">
+        .jg_cta_popup {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <div id="jg_contact_popup" class="jg_contact_popup" style="display:none;">
+        <div class="jg_contact_popup_inner jg_C_P_form full_screen">
+            <div id="jg_contact_popup_close">&times;</div>
+            <h3 style="text-align: center;font-weight: bold;margin-bottom: 5px;margin-top: 10px;">Let's create something together!</h3>
+            <div id="jg_cta_popup" class="jg_cta_popup">
+                <div class="jg_contact_popup_L">
+                    <div class="jg_popup_map_bg">
+                        <div id="map_loc_point1" class="map_loc_point"></div>
+                        <div id="map_loc_point2" class="map_loc_point"></div>
+                        <div id="map_loc_point3" class="map_loc_point"></div>
+                        <div id="map_loc_point4" class="map_loc_point"></div>
+                        <div id="map_loc_point5" class="map_loc_point"></div>
+                    </div>
+                    <p>Meet us here</p>
+                </div>
+                <div class="jg_contact_popup_R">
+                    <div class="jg_contact_popup_R1">
+                        <div class="jg_contact_popup_R2">
+                            <h3>Send us a message</h3>
+                            <div class="ErrorMsg" id="Cl_CTA_errorMsg"></div>
+                            <form name="jgC_P_Form" id="jgC_P_Form" class="jgC_P_Form" method="post">
+                                <ol>
+                                    <li>
+                                        <input type="text" name="name" id="jgCName" placeholder="Name*" autocomplete="name" />
+                                    </li>
+                                    <li>
+                                        <input type="text" name="email" id="jgCEmail" placeholder="Email*" autocomplete="email" />
+                                    </li>
+                                    <li>
+                                        <input type="text" name="phone" id="jgCPhone" placeholder="Phone" autocomplete="tel" />
+                                    </li>
+                                    <li class="textarea">
+                                        <textarea name="Msg" id="jgCMsg" rows="4" cols="30" placeholder="Message"></textarea>
+                                    </li>
+                                    <li class="get_in_touch">
+                                        <p style="display:none;">
+                                            <input type="text" name="emailid" id="emailfld" class="emailfld" value="">
+                                            <input type="text" name="message" id="message" value="">
+                                        </p>
+                                        <input type="hidden" name="firstName" id="firstName" value="">
+                                        <input type="hidden" name="Source" class="Source">
+                                        <input type="hidden" name="Medium" class="Medium">
+                                        <input type="hidden" name="Campaign" class="Campaign">
+                                        <input type="hidden" name="KeyWord" class="KeyWord">
+                                        <input type="hidden" name="Cookie_Country" class="Cookie_Country">
+                                        <input type="button" name="clMSubmit" id="clMSubmit" class="clMSubmit CLsubmitbtn" value="Submit" />
+                                    </li>
+                                </ol>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" id="inspectletjs">
+        window.__insp = window.__insp || [];
+        __insp.push(['wid', 986280115]);
+        (function() {
+            function ldinsp() {
+                if (typeof window.__inspld != "undefined") return;
+                window.__inspld = 1;
+                var insp = document.createElement('script');
+                insp.type = 'text/javascript';
+                insp.async = true;
+                insp.id = "inspsync";
+                insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js';
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(insp, x);
+            };
+            setTimeout(ldinsp, 500);
+            document.readyState != "complete" ? (window.attachEvent ? window.attachEvent('onload', ldinsp) : window.addEventListener('load', ldinsp, false)) : ldinsp();
+        })();
+    </script>
+    <!--[if lt IE 9]>
+<script src="http://p81cp3piavx1nzg3d1jvdrao.wpengine.netdna-cdn.com/wp-content/themes/wpclicklabs/includes/js/respond-IE.js"></script>
+<![endif]-->
+    <script type='text/javascript' src='assets/wp-includes/js/comment-reply.min62d0.js?ver=4.5.3'></script>
+    <script type='text/javascript' src='assets/wp-includes/js/wp-embed.min62d0.js?ver=4.5.3'></script>
+
+    <script async type="text/javascript" src="assets/wp-content/themes/wpclicklabs/cfiles/css3-animate-it.js"></script>
+
+
+    <div style="display: none;">
+    <script type="text/javascript" src="assets/wp-content/themes/wpclicklabs/cfiles/lazy_load_img.js"></script>
+    <script type="text/javascript" src="assets/wp-content/themes/wpclicklabs/cfiles/custom_jq.js"></script>
+    <script type="text/javascript" src="assets/wp-content/themes/wpclicklabs/cfiles/jquery.easing.1.3.js"></script>
+
+    <script type="text/javascript">
+        jQuery(function() {
+            jQuery(".lazy_a").lazyload({
+                effect: "fadeIn"
+            });
+
+            jQuery(".lazy_click").lazyload({
+                event: "click",
+                effect: "fadeIn"
+            });
+
+        });
+    </script>
+
+</body>
+
+<!-- Mirrored from click-labs.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 02 Aug 2016 06:18:48 GMT -->
+
+</html>

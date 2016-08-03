@@ -1,0 +1,251 @@
+/* 
+WOO CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles in this file instead of style.css so it 
+is easier to update the theme. Simply copy an existing style 
+from style.css to this file, and modify it to your liking. */
+
+
+/* 
+GLOBAL STYLES
+----------------
+Add styles beneath this line that you want to be applied across your entire site */
+
+blog_subscribe{}
+.blog_subscribe form{ margin:0;}
+.blog_subscribe input[type=text]{
+height: 45px;
+width: 300px;
+vertical-align:top;
+}
+.blog_subscribe input[type=submit], .blog_subscribe input[type=button]{
+padding: 7px 25px 6px;
+font-size: 16px;
+border: none;
+margin-left: -5px;
+border-radius: 0;
+height: 45px;
+text-transform: uppercase;
+}
+.sidebar_team_subscribe
+{
+background: #efefef;
+padding: 15px;
+}
+
+.lpBlogDwDiv{text-align: center;}
+.lpBlogDwDiv form{width: 500px;
+margin: 0 auto;
+}
+.lpBlogDwDiv input#lpBlogDwEmail{
+	width:54.5%;	
+}
+
+@media only screen and (max-width: 600px){
+.lpBlogDwDiv{text-align: center;}
+.lpBlogDwDiv form{width: 100%;}
+.lpBlogDwDiv input#lpBlogDwEmail{
+	width: 97.5%;
+}
+.lpBlogDwDiv input.lpBlogDwSubmit {
+width: 100%;
+margin: 12px auto;
+}
+
+}
+
+.blog_side_auth .avatar{
+	float: left;
+  border-radius: 100%;
+  margin-right: 15px;
+ margin-bottom: 20px;
+  }
+  .blog_side_auth .h5,  .blog_side_auth a{
+	  color: #FF5615;
+  }
+  .blog_side_auth{ margin:50px 0 40px;}
+  
+.blog_p_post_cat ul {
+	border-bottom: 1px solid #ddd;
+	height:32px;
+}
+.blog_p_post_cat ul:after {
+	content:"";
+	clear:both;
+	display:block;
+	
+}
+.blog_p_post_cat ul li{
+list-style: none;
+  display: block;
+  float: left;
+  clear: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -1px;
+  width: 24.5%;	
+}
+
+
+.blog_p_post_cat ul a{
+margin: 0;
+  padding: 0;
+  text-decoration: none;
+  padding: 14px 2em 6px;
+  margin-right: 2px;
+  line-height: 14px;
+  font-weight:bold;
+  border: 1px solid transparent;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  /* font-size: 20px; */
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #414141;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+.blog_p_post_cat ul a:hover
+{
+	color:#2d83af;
+}
+.blog_p_post_cat ul li.blog_p_post_cat_active a{
+border: 1px solid #ddd;
+border-bottom-color: transparent;
+background-color: #ffffff;
+}
+blog_p_post_cat ul li.blog_p_post_cat_active a:hover{
+	color:#414141;
+	}
+.blog_p_featured_container{ text-align:center;}
+.blog_p_featured_container::after{ content:""; display:block; clear:both;}
+.blog_p_featured_container a, a img:hover, img{ opacity:1 !important;}
+.portfolio-item{ float:left;margin-right: 12px;margin-bottom: 90px !important;}
+.blog_p_featured_area h2{margin: 70px 10px 42px;}
+.blog_p_featured_title
+{
+	padding-top: 30px;
+  color: #000;
+  position: absolute;
+  text-align: left;
+  width: 100%;
+  font-size: 22px;
+  line-height:28px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+#sidebar{ float: none; margin: 0 auto; }
+.blog_p_banner .col-full{ width: 100%;}
+
+}
+
+@media only screen and (min-width: 768px) {
+	/* Desktop styles go here */
+#footer-widgets	#nav_menu-3{ padding-left: 70px; }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 500px){
+.footer-widget-1{	
+	width: 60%;
+}
+}
+
+@media only screen and (max-width: 800px) {
+
+.blog_p_post_cat ul{height: 30px;}
+.blog_p_post_cat ul a{padding: 10px 8px 6px;font-size: 14px;}
+.popuptable {
+width: 100% !important;
+left: 0 !important;
+margin-left: 0 !important;
+}
+
+}
+
+@media only screen and (max-width: 767px) {
+.portfolio-item{
+float: none !important;
+  width: 250px;
+  display: block;
+  margin: 0 auto !important;
+  margin-bottom: 90px !important;
+}
+.blog_p_featured_title{ text-align: center !important;font-size: 18px; padding-top: 15px;}
+
+	.Post_Tag_Line
+	{
+		font-size:14px !important;
+	}
+	
+	.blog_subscribe input[type=text]{
+	width: 155px;
+font-size: 14px;	
+	}
+.blog_subscribe input[type=submit], .blog_subscribe input[type=button]{
+padding: 5px 8px;
+font-size: 14px;	
+}
+/*.subscribe_link, .blog_subscribe{ display:none !important;}*/
+.blog_subscribe {
+  width: 100%;
+}
+}
+
+@media only screen and (max-width: 480px) {
+	
+.blog_p_post_cat ul a
+{
+	font-size: 6px;
+}
+.blog_subscribe {
+float: none;
+margin: 0 auto;
+padding-top: 55px;
+}
+
+.post_sec{ width:100% !important; float:none !important;}
+
+}
+
+@media only screen and (max-width: 320px) {
+.blog_subscribe input[type=submit], .blog_subscribe input[type=button], #news_submit
+{
+padding: 10px 6px !important;
+font-size: 12px;
+display: inline-block;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+background: #26CBE0 !important;
+background-color:rgb(38, 203, 224) !important;
+color: #FFF;
+overflow: visible;
+width: 100px;;
+line-height: 1.618em !important;
+border-radius:0 !important;
+-webkit-border-radius:0 !important;
+outline: 0;	
+height: 40px !important;
+}
+.blog_subscribe input[type=text] {
+width: 135px;
+font-size: 12px;
+}
+
+}
+
+/* 
+DESKTOP STYLES
+-----------------
+Add styles inside the media query below that you only want to be applied to the desktop layout of your site */
+
+@media only screen and (min-width: 768px) {
+	/* Desktop styles go here */
+}
