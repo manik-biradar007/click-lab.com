@@ -196,11 +196,11 @@ dl dd{margin-bottom:1.618em;}
 table{width:100%;}
 ul.nav li a{padding:.5em 1em;display:block;color:#4a4a4a;}
 ul.nav li a:hover{color:#40B9BC;}
-ul.nav li.current_page_item a,
+/* ul.nav li.current_page_item a,
 ul.nav li.current_page_parent a,
 ul.nav li.current-menu-ancestor a,
 ul.nav li.current-cat a,
-ul.nav li.li.current-menu-item a{color:#40B9BC;}
+ul.nav li.li.current-menu-item a{color:#40B9BC;} */
 #navigation{margin-bottom:0;padding:1.618em 2.618em 0 2.618em;display:none;clear:both;float:none;}
 #top{padding-bottom:1.618em;}
 #top select{margin:1.618em 0 0;width:100%;}
@@ -955,4 +955,7 @@ h6{font-size:16px;line-height:22px;}
 .return-to-top:hover {
     transform: scale(1.05);
     opacity: 1;
+}
+.active{
+	color: #40B9BC !important;
 }

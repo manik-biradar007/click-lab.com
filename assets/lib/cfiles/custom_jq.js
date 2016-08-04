@@ -53,44 +53,7 @@ jQuery(document).ready(function(){
 	return false;
 	});
 	
-	/*jQuery('.fancy_scroll a[href^="#"]').on('click', function (e) {
-		 e.preventDefault();
-		var target = this.hash,
-			$target = jQuery(target);
-	
-		jQuery('html, body').stop().animate({
-			'scrollTop': $target.offset().top
-		}, 900, 'swing', function () {});
-	});*/
-	
-	  var sections = $('section')
-		, nav = $('nav')
-		, nav_height = nav.outerHeight();
-	   
-	  $(window).scroll(function(e) {
-		  //e.stopPropagation();
-		  e.preventDefault();
-		var cur_pos = $(this).scrollTop();
-		sections.each(function() {
-		  var top = $(this).offset().top - nav_height,
-			  bottom = top + $(this).outerHeight();
-	   
-		  if (cur_pos >= top && cur_pos <= bottom) {
-            
-			//nav.find('li').removeClass('current_page_item');
-			$('.home .nav li').removeClass('current_page_item');
-			//nav.find('li a[href="#'+$(this).attr('id')+'"]').parent('li').addClass('selected_menu');
-			nav.find('a[href="/#'+$(this).attr('id')+'"]').parent('li').addClass('selected_menu'); 
-		  }
-		  else
-		  {  
-			  nav.find('a').parent('li').removeClass('selected_menu'); 
-		  }
-		});
-	  });
-		
-	
-	
+
 		jQuery('.cl_fixed_nav h3.nav-toggle').click(function () {
 		  jQuery('.cl_fixed_nav #main-nav').slideToggle(500);
 		  jQuery('.cl_fixed_nav .cl_logo').toggleClass('marginBtm15');
@@ -105,68 +68,6 @@ jQuery(document).ready(function(){
   		
 		
 /* @@@@==============@@@   Main Contact PopUp   @@@==============@@@  */	
-
-/* Mail function */
-
-function Contact_submit() {
-    
-    jQuery.ajax({
-        type: 'post',
-        url: '/wp-content/themes/wpclicklabs/cta/contact_submitted.php',
-        data: {},
-        dataType: 'JSON',
-        success: function(data) {
-        },
-    });
-    return true;
-}
-
-
-function ClPopUpMail() {
-	var name = jQuery("#jgCName").val();
-	var email = jQuery("#jgCEmail").val();
-	var phone = jQuery("#jgCPhone").val(); 
-	var msg = jQuery("#jgCMsg").val();
-    var pageurl = window.location.href;
-	
-	var Source = jQuery(".Source").val();
-	var Medium = jQuery(".Medium").val();
-	var Campaign = jQuery(".Campaign").val();
-	var KeyWord = jQuery(".KeyWord").val();
-    var beauty_page = jQuery(".beauty_page").val();
-    if(beauty_page == "" || beauty_page == null){
-        beauty_page="false";
-    }
-	var Cookie_Country = jQuery(".Cookie_Country").val();
-    var pagetitle = $(document).find("title").text();
-	
-	jQuery.ajax({
-		type: 'post',
-		url: '/wp-content/themes/wpclicklabs/cta/cta.php',
-		data: {
-			name: name,
-			email: email,
-			phone: phone,
-			msg:msg,
-			pageurl: pageurl,
-			Source:Source,
-			Medium:Medium,
-			Campaign:Campaign,
-			KeyWord:KeyWord,
-            beauty_page:beauty_page,
-			Cookie_Country:Cookie_Country,
-            pagetitle:pagetitle,
-			formid:1,
-			type:1
-			},
-		dataType: 'JSON',
-		success: function(data) {
-			//console.log(data);
-			//console.log(data['message']);
-		},
-	});
-	return true;
-}
 
 	
     jQuery('input#clMSubmit').click(function() {
@@ -1190,3 +1091,45 @@ function exit_sendmail() {
 }
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ /// Exit Intent Jquery   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+/*Navigation*/
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.customeMenu #main-nav a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        //console.log($(currLink.attr("href")));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.customeMenu #main-nav li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
