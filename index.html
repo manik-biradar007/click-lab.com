@@ -7,18 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <script type='text/javascript' src='assets/wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+    <script type='text/javascript' src='assets/lib/jquery-1.7.2.min.js'></script>
     <script src="assets/lib/cfiles/nprogress.js"></script>
     <script type="text/javascript" src="assets/lib/cfiles/jquery.cookie.js"></script>
     <script async src="assets/lib/cfiles/jquery.bpopup.js"></script>
     
-
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/lib/style.css" media="screen" />
     <link rel='stylesheet' id='woo-layout-css' href='assets/lib/css/layout62d0.css?ver=4.5.3' type='text/css' media='all' />
     <link href="assets/lib/styles/default.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" type="text/css" href="assets/lib/cfiles/custom_style.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="assets/lib/cfiles/nprogress.css" media="screen" />
+
+	<!-- PreloaderScript -->
+	<script>
+		// makes sure the whole site is loaded
+		$(window).load(function() {
+			$("html, body").animate({ scrollTop: 0 }, 1);
+		    // will first fade out the loading animation
+		    $(".spinner-wrapper").fadeOut();
+		    // will fade out the whole DIV that covers the website.
+		    $("#preloader").delay(1000).fadeOut("slow"); //Change Here to increse loader time
+		})
+	</script>
 
     <script type="text/javascript">
         $ = jQuery;
@@ -99,6 +111,16 @@
             max-width: 100%;
         }
     </style>
+
+    <!-- CSS Preloader -->
+	<div id="preloader">
+		<p class="pre">Omega Solutions</p>
+	  	<div id="status">&nbsp;</div>
+	</div>
+	
+	<!-- Return to Top -->
+	<div class="return-to-top" onclick="move()"></div>
+	
     <div id="wrapper" class="fixed_nav nav_h_type loader_new out">
         <section class="cl_top_bar">
             <a class="pusher animatedClick" data-target="clickAnimate"> <span></span> <span></span> <span></span> </a>

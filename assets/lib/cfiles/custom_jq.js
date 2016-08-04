@@ -9,6 +9,22 @@ jQuery(window).load(function() {
 });
 /* @@@@============@@@   // UTM Cookies   @@@============@@@  */
 
+$(window).scroll(function() {
+    var scrolledY = $(window).scrollTop();
+    if (scrolledY>=100)
+        {
+             $('.return-to-top').fadeIn(200);
+        }
+        else 
+        {
+            $('.return-to-top').fadeOut(200);
+        }
+});
+
+function move(){
+    $('body,html').animate({scrollTop : 0}, 500);
+}
+
 jQuery(document).ready(function(){
 	
 	$(window).scroll(function() {
@@ -55,20 +71,20 @@ jQuery(document).ready(function(){
 		  //e.stopPropagation();
 		  e.preventDefault();
 		var cur_pos = $(this).scrollTop();
-	   
 		sections.each(function() {
 		  var top = $(this).offset().top - nav_height,
 			  bottom = top + $(this).outerHeight();
 	   
 		  if (cur_pos >= top && cur_pos <= bottom) {
+            
 			//nav.find('li').removeClass('current_page_item');
 			$('.home .nav li').removeClass('current_page_item');
 			//nav.find('li a[href="#'+$(this).attr('id')+'"]').parent('li').addClass('selected_menu');
 			nav.find('a[href="/#'+$(this).attr('id')+'"]').parent('li').addClass('selected_menu'); 
 		  }
 		  else
-		  {
-			  nav.find('a[href="/#'+$(this).attr('id')+'"]').parent('li').removeClass('selected_menu'); 
+		  {  
+			  nav.find('a').parent('li').removeClass('selected_menu'); 
 		  }
 		});
 	  });
@@ -145,8 +161,8 @@ function ClPopUpMail() {
 			},
 		dataType: 'JSON',
 		success: function(data) {
-			console.log(data);
-			console.log(data['message']);
+			//console.log(data);
+			//console.log(data['message']);
 		},
 	});
 	return true;
@@ -220,7 +236,7 @@ function ClPopUpMail() {
     if (this.value.length > 0) {
     //$(this).prev('.digits').focus();
     //$(this).prev('.digits').trigger( "select" );
-        console.log(jQuery("#jgCEmail").val());
+        //console.log(jQuery("#jgCEmail").val());
     }  });
 
     jQuery( "#jgCEmail" ).keyup(function() {
@@ -261,7 +277,7 @@ function email_keyup()
                         },
                     dataType: 'Json',
                     success: function(data) {
-                        console.log(data);
+                        //console.log(data);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         //console.log("Status: " + textStatus); 
@@ -285,7 +301,7 @@ function email_blur()
                         },
                     dataType: 'Json',
                     success: function(data) {
-                        console.log(data);
+                       // console.log(data);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         //console.log("Status: " + textStatus); 
@@ -310,7 +326,7 @@ function name_keyup()
                         },
                     dataType: 'Json',
                     success: function(data) {
-                        console.log(data);
+                        //console.log(data);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         //console.log("Status: " + textStatus); 
@@ -334,7 +350,7 @@ function name_blur()
                         },
                     dataType: 'Json',
                     success: function(data) {
-                        console.log(data);
+                        //console.log(data);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         //console.log("Status: " + textStatus); 
@@ -359,7 +375,7 @@ function phone_keyup()
                         },
                     dataType: 'Json',
                     success: function(data) {
-                        console.log(data);
+                        //console.log(data);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         //console.log("Status: " + textStatus); 
@@ -383,7 +399,7 @@ function phone_blur()
                         },
                     dataType: 'Json',
                     success: function(data) {
-                        console.log(data);
+                        //console.log(data);
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) { 
                         //console.log("Status: " + textStatus); 
@@ -440,7 +456,7 @@ function newsletter_sub() {
                     dataType: 'JSON',
 				    //processData: false,
                     success: function(data) {
-                        console.log(data);
+                       // console.log(data);
 
                         //alert(data['log']);
 
@@ -476,7 +492,7 @@ function newsletter_sub() {
                     dataType: 'JSON',
 				    //processData: false,
                     success: function(data) {
-                        console.log(data);
+                       // console.log(data);
                         if (data['log'] == 1) {
 							console.log(data);
                         }
@@ -586,7 +602,7 @@ jQuery(document).ready(function() {
                     var j_p_id = $('.current_p').attr('id');
 					//fIn_time = 300;
 					//fOut_time = 300;
-					console.log(j_p_id);
+					//console.log(j_p_id);
                     if (j_p_id == 'j_h_products_slider1')
                     {
 				
@@ -1166,7 +1182,7 @@ function exit_sendmail() {
       },
     dataType: 'JSON',
     success: function(data) {
-      console.log(data);
+     // console.log(data);
       console.log(data['message']);
     },
   });
