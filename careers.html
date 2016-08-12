@@ -13,25 +13,25 @@
     <script type="text/javascript" src="assets/lib/cfiles/jquery.cookie.js"></script>
     <script async src="assets/lib/cfiles/jquery.bpopup.js"></script>
     
-	<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/lib/style.css" media="screen" />
     <link rel='stylesheet' id='woo-layout-css' href='assets/lib/css/layout62d0.css?ver=4.5.3' type='text/css' media='all' />
     <link href="assets/lib/styles/default.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" type="text/css" href="assets/lib/cfiles/custom_style.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="assets/lib/cfiles/nprogress.css" media="screen" />
-
-	<!-- PreloaderScript -->
-	<script>
-		// makes sure the whole site is loaded
-		$(window).load(function() {
-			$("html, body").animate({ scrollTop: 0 }, 1);
-		    // will first fade out the loading animation
-		    $(".spinner-wrapper").fadeOut();
-		    // will fade out the whole DIV that covers the website.
-		    $("#preloader").delay(1000).fadeOut("slow"); //Change Here to increse loader time
-		})
-	</script>
+    <link rel="stylesheet" type="text/css" href="assets/lib/cfiles/careers_style.css"/>
+    <!-- PreloaderScript -->
+    <script>
+        // makes sure the whole site is loaded
+        $(window).load(function() {
+            $("html, body").animate({ scrollTop: 0 }, 1);
+            // will first fade out the loading animation
+            $(".spinner-wrapper").fadeOut();
+            // will fade out the whole DIV that covers the website.
+            $("#preloader").delay(1000).fadeOut("slow"); //Change Here to increse loader time
+        })
+    </script>
 
     <script type="text/javascript">
         $ = jQuery;
@@ -71,51 +71,32 @@
                 });
             }
 
-            jQuery('.cl_fixed_nav').addClass('cl_H_fixed_nav bg_white box_shw');
-            jQuery(".cl_fixed_nav #logo img").removeClass('animated fadeInDown');
-            jQuery(".cl_fixed_nav #main-nav").removeClass('animated fadeInUp');
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop();
-                //var reduced_h1 = $(window).height() - 10;
-                var reduced_h1 = 60;
-                if ($(window).scrollTop() > reduced_h1) {
-                    //$('#header-wrap').css('opacity',1);
-                    jQuery(".home .cl_fixed_nav, .nav_h_type .cl_fixed_nav").removeClass('cl_H_fixed_nav');
-                    jQuery(".page-id-86 .cl_fixed_nav").removeClass('cl_H_fixed_nav');
-                    jQuery(".page-id-16 .cl_fixed_nav").removeClass('cl_H_fixed_nav');
-                } else {
-                    //$('#header-wrap').css('opacity',0);   
-                    jQuery('.home .cl_fixed_nav, .nav_h_type .cl_fixed_nav').addClass('cl_H_fixed_nav');
-                    jQuery('.page-id-86 .cl_fixed_nav').addClass('cl_H_fixed_nav');
-                    jQuery('.page-id-16 .cl_fixed_nav').addClass('cl_H_fixed_nav');
-                }
-            });
 
         });
     </script>
 </head>
 
-<body class="home page page-id-12 page-template page-template-home_temp page-template-home_temp-php unknown alt-style-default layout-full">
+<body class="application">
     <!-- CSS Preloader -->
-	<div id="preloader">
-		 	<div id="status">&nbsp;</div>
-	</div>
-	
-	<!-- Return to Top -->
-	<div class="return-to-top" onclick="move()"></div>
-	
+    <div id="preloader">
+            <div id="status">&nbsp;</div>
+    </div>
+    
+    <!-- Return to Top -->
+    <div class="return-to-top" onclick="move()"></div>
+    
     <div id="wrapper" class="fixed_nav nav_h_type loader_new out">
         <section class="cl_top_bar">
             <a class="pusher animatedClick" data-target="clickAnimate"> <span></span> <span></span> <span></span> </a>
         </section>
-        <nav class='cl_fixed_nav open customeMenu' style="display:none;">
+        <nav class="cl_fixed_nav open  bg_white box_shw" >
             <div class="col-full">
                 <div class='bg-cover'>
                     <div class="" id="menu">
                         <div id="logo" class="cl_logo">
                             <a id="logo" href="#top" title="tech done right">
                                 <img class="clickAnimate logo_black_cl" src="assets/images/logo_fixed.png" alt="Click Labs" />
-                                <img style="display:none;" class="clickAnimate logo_white_cl" src="assets/images/CL-logo-white.png" alt="Click Labs" />
+                                <img  class="clickAnimate logo_white_cl" src="assets/images/CL-logo-white.png" alt="Click Labs" />
                             </a>
                             <hgroup>
                                 <h3 class="nav-toggle"><a href="#navigation">Navigation</a></h3>
@@ -144,28 +125,102 @@
 
         <article class="post-12 page type-page status-publish hentry" style="margin: 0;">
 
-            <div class="home_temp">
+            <div class="">
 
-                <section class="h_banner">
-                    <div class="h_banner_bg_p">
-                        <div class="h_banner_bg"></div>
-                    </div>
-                    <div class="h_banner_shdw">
-                        <div class="col-full">
-                            <div class="banner_table">
-                                <div class="banner_tableCell">
-                                    <h1>tech done right</h1>
-                                    <h5>We help you move from Zero to One without reinventing the wheel</h5>
-                                    <div class="jg_banner_gitbtn"><a class="jg_c_popup jg_click_popup" style="pointer-events: auto;">Get In Touch</a>
+                <section class="">
+                    <div class="content-wrapper application-page">
+                        <div class="content">
+                            <div class="section-wrapper accent-section small-accent page-full-width">
+                                <div class="section page-centered posting-header">
+                                    <h2>Apply For Jobs</h2>
+                                    <div class="posting-categories">
+                                        <div href="#" class="sort-by-time posting-category medium-category-label">Current Oppenings: <br> <br>UI Designer, Front End Devloper<br></div>                                        
                                     </div>
                                 </div>
-                                <div class="banner_tableCell_btm" style="">
-                                    <p class="fancy_scroll" style=""><a class="" href="index.html#Products" style="color:#FFF !important;">Learn more about what we do <span style="transform: rotate(7deg);">&#10095;</span></a>
-                                    </p>
-                                </div>
+                            </div>
+                            <div class="section-wrapper page-full-width">
+                                <form enctype="multipart/form-data" method="POST">
+                                    <div class="section page-centered application-form">
+                                        <h4>Submit your application</h4>
+                                        <ul>
+                                            <li class="application-question resume">
+                                                <label>
+                                                    <div class="application-label">Resume/CV <span class="required">✱</span></div>
+                                                    <div class="application-field">
+                                                        <input type="file" value="Upload Resume">
+                                                    </div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li class="application-question">
+                                                <label>
+                                                    <div class="application-label">Full name<span class="required">✱</span></div>
+                                                    <div class="application-field"><input type="text" name="name" required=""></div>
+                                                </label>
+                                            </li>
+                                            <li class="application-question">
+                                                <label>
+                                                    <div class="application-label">Email<span class="required">✱</span></div>
+                                                    <div class="application-field"><input name="email" type="email" pattern="[a-zA-Z0-9.#$%&amp;'*+\/=?^_`{|}~][a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*" required=""></div>
+                                                </label>
+                                            </li>
+                                            <li class="application-question">
+                                                <label>
+                                                    <div class="application-label">Phone </div>
+                                                    <div class="application-field"><input type="text" name="phone"></div>
+                                                </label>
+                                            </li>
+                                            <li class="application-question">
+                                                <label>
+                                                    <div class="application-label">Current company </div>
+                                                    <div class="application-field"><input type="text" name="org"></div>
+                                                </label>
+                                            </li>
+
+                                            <li class="application-question">
+                                                <label>
+                                                    <div class="application-label">Applying For</div>
+                                                    <div class="application-field">
+                                                        <select id="jobCat">
+                                                           <option value="None">UI DESIGNER</option>
+                                                           <option value="China">FRONT END DEVLOPER</option>
+                                                           <option value="United State">Android Developer</option>
+                                                        </select>
+                                                    </div>
+                                                </label>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="section page-centered application-form">
+                                        <h4>Links</h4>
+                                        <ul>
+                                            <li class="application-question">
+                                                <label>
+                                                    <div class="application-label">Portfolio URL</div>
+                                                    <div class="application-field"><input type="text" name="urls[Portfolio]"></div>
+                                                </label>
+                                            </li>
+                                            <li class="application-question">
+                                                <label>
+                                                    <div class="application-label">Other website</div>
+                                                    <div class="application-field"><input type="text" name="urls[Other]"></div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="section page-centered application-form">
+                                        <h4>Additional information</h4>
+                                        <div class="application-additional"><textarea placeholder="Add a cover letter or anything else you want to share." name="comments"></textarea></div>
+                                    </div>
+                                    <input type="hidden" name="linkedInData"><input type="hidden" name="source"><input type="hidden" name="referer" value="https://jobs.lever.co/clicklabs/728e1542-045e-41b2-9329-bdee6b840b42"><input type="hidden" name="socialReferralKey">
+                                    <div class="section page-centered application-form last-section-apply"><button class="postings-btn template-btn-submit" href="#" type="submit">Submit application</button></div>
+                                </form>
                             </div>
                         </div>
                     </div>
+
                 </section>
                 <script type="text/javascript">
                     jQuery(document).ready(function() {
@@ -173,205 +228,8 @@
                         jQuery('#img_loader').hide();
                         jQuery('.loader_new').removeClass('out');
                     });
-                </script>
-                <section id="Products" class="cl_h_sec3" style="background:#F4F4F4;">
-                    <div class="col-full">
-                        <h3 style="text-align:center;">Products</h3>
-                        <h5 style="text-align:center;">Different approaches to platform development centered around creating real value for you depending on the stage/nature/scale of your idea</h5>
-                        <div class="j_h_products_sec">
-                            <div id="j_h_products_slider1" class="j_h_products_slider current_p">
-                                <div class="j_h_products_slider_l lazy_a" data-original="assets/images/2.jpg" ></div>
-                                <div class="j_h_products_slider_r">
-                                    <article>
-                                        <h3>Tech Jobs</h3>
-                                        <p>We develop On Demand Platforms for entrepreneur and enterprise level initiatives that are disrupting industry value chains across different verticals</p>
-                                        <div class="j_h_p_s_btn"><a href="">Learn More</a>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-                            <div id="j_h_products_slider2" class="j_h_products_slider" style="display:none;">
-                                <div class="j_h_products_slider_l" style="background-image:url('assets/images/3.jpg');"></div>
-                                <div class="j_h_products_slider_r">
-                                    <article>
-                                        <h3>Process</h3>
-                                        <p>Simple, Powerful and highly flexible Platform to manage your mobile workforce</p>
-                                        <div class="j_h_p_s_btn"><a href="" >Learn More</a>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-                            <div id="j_h_products_slider3" class="j_h_products_slider" style="display:none;">
-                                <div class="j_h_products_slider_l" style="background:url(assets/images/1.jpg) no-repeat center center;"></div>
-                                <div class="j_h_products_slider_r">
-                                    <article>
-                                        <h3>Wor Flow</h3>
-                                        <p>Comprehensive suite of automated mobile and web-based scheduling and dispatch software to take your ground transportation business to the new era</p>
-                                        <div class="j_h_p_s_btn"><a href="" >Learn More</a>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="j_h_p_s_NP_btn">
-                            <div class="j_h_p_s_Prev">
-                                <div>&Delta;</div>
-                            </div>
-                            <div class="j_h_p_s_Next">
-                                <div>&Delta;</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="Work" style="padding:0; margin:0;">
-                    <div class="home_temp work_l_page">
-                        <article id="Portfolio">
-                            <section class="cl_h_sec5" style="padding-bottom:0;">
-                                <div class="col-full">
-                                    <h3 style="text-align:center;">Work</h3>
-                                    <h5 style="text-align:center;margin-bottom: 40px;">We have powered more than 100 platforms in the past 5 <span>years, here are our hand-picks</span></h5>
-                                </div>
-                                <ul class="work-list1">
-                                    <li>
-                                        <a href="">
-                                            <div class="bg1 lazy_a" data-original="assets/images/thamb1.jpg" ></div>
-                                            <div class="bg2"></div>
-                                            <i class="i1">
-                                            <div>
-                                                <img class="lazy_a" data-original="assets/images/thamblogo1.png"  alt="Nowness" width="100">
-                                                    <p>Tech Jobs</p>
-                                                </div>
-                                                </i>
-                                            <i class="i2">
-                                            <div>
-                                                <p>Reliable and affordable Tech Jobs on demand</p>
-                                            </div>
-                                            </i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <div class="bg1 lazy_a" data-original="assets/images/thamb2.jpg" ></div>
-                                            <div class="bg2"></div>
-                                            <i class="i1"><div>
-                                            <img class="lazy_a" data-original="assets/images/thamblogo2.png"  alt="Nowness" width="168">
-                                            <p>Omega IDEA</p>
-                                            </div></i>
-                                            <i class="i2"><div>
-                                            <p>A four sided marketplace set out to revolutionize phlebotomy</p>
-                                            </div></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <div class="bg1 lazy_a" data-original="assets/images/thamb3.jpg" ></div>
-                                            <div class="bg2"></div>
-                                            <i class="i1"><div>
-                                            <img class="lazy_a" data-original="assets/images/thamblogo3.png"  alt="Nowness" width="124">
-                                            <p>Omega Call</p>
-                                            </div></i>
-                                            <i class="i2"><div><p>On-demand Call Service that solve cash shortage on site</p></div></i>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="">
-                                            <div class="bg1 lazy_a" data-original="assets/images/thamb4.jpg" ></div>
-                                            <div class="bg2"></div>
-                                            <i class="i1"><div>
-                                            <img class="lazy_a" data-original="assets/images/thamblogo4.png"  alt="Nowness" width="124">
-                                            <p>Omega Plus</p>
-                                            </div></i>
-                                            <i class="i2"><div><p>On-demand Service that solve shortage on site</p></div></i>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="">
-                                            <div class="bg1 lazy_a" data-original="assets/images/thamb5.jpg" ></div>
-                                            <div class="bg2"></div>
-                                            <i class="i1"><div>
-                                            <img class="lazy_a" data-original="assets/images/thamblogo5.png"  alt="Nowness" width="124">
-                                            <p>Phaeses</p>
-                                            </div></i>
-                                            <i class="i2"><div><p>On-demand Phaeses Service</p></div></i>
-                                        </a>
-                                    </li>
-                            </section>
-                        </article>
-                    </div>
-                </section>
-
-
-                <section id="Our-Process" class="cl_enterpreneur_sec4" style="background: #f2f2f2;">
-                    <div class="col-full">
-                        <h3>Our Process</h3>
-                        <p>If you are building a platform and are in it for a long haul we are here to help you through different stages of evolution - validation, efficiency and scale.</p>
-                        <div class="bg-line">
-                            <div class="secure three-div-col">
-                                <div class="mrg-btm-25">
-                                    <h4>01</h4>
-                                    <img class="lazy_a" data-original="assets/images/security.png" alt="">
-                                    <p> Security</p>
-                                    <span>Your IP is of utmost importance to us. All of our discussions begin with an NDA.</span>
-                                </div>
-                            </div>
-                            <div class="initial three-div-col">
-                                <div class="mrg-btm-25">
-                                    <h4>02</h4>
-                                    <img class="lazy_a" data-original="assets/images/initialchat.png" alt="">
-                                    <p> Initial Chat</p>
-                                    <span>You can discuss your idea without any commitment. We understand you might just be window shopping.</span>
-                                </div>
-                            </div>
-                            <div class="consultation three-div-col">
-                                <div class="mrg-btm-25">
-                                    <h4>03</h4>
-                                    <img class="lazy_a" data-original="assets/images/consultation.png" alt="">
-                                    <p> Consultation</p>
-                                    <span>Using your expertise we would help you brainstorm all aspects of your business model from customer acquisition to unit economics. </span>
-                                </div>
-                            </div>
-                            <div style="clear:both"></div>
-                        </div>
-                        <div class="bg-line">
-                            <div class="secure three-div-col">
-                                <div class="mrg-btm-25">
-                                    <h4>04</h4>
-                                    <img class="lazy_a" data-original="assets/images/followupcat.png" alt="">
-                                    <p> Follow-UP Chat</p>
-                                    <span>Based on the Business Model, we finalise the necessary features of the technology to help bring your idea to life.</span>
-                                </div>
-                            </div>
-                            <div class="initial three-div-col">
-                                <div class="mrg-btm-25">
-                                    <h4>05</h4>
-                                    <img class="lazy_a" data-original="assets/images/totalcontrol.png" alt="">
-                                    <p> Total Control</p>
-                                    <span>Zero Outsourcing, complete control and maximum flexibility allow you and your team to call the shots at every level.</span>
-                                </div>
-                            </div>
-                            <div class="consultation three-div-col">
-                                <div class="mrg-btm-25">
-                                    <h4>06</h4>
-                                    <img class="lazy_a" data-original="assets/images/postlaunchservice.png" alt="">
-                                    <p> Post Launch Service</p>
-                                    <span>We stick with you after launch, as we understand that this is just the first step in the process.</span>
-                                </div>
-                            </div>
-                            <div style="clear:both"></div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="Cta" class="cl_h_sec7" style="background:#fff;padding-top: 80px;padding-bottom: 60px;">
-                    <div class="col-full">
-                        <h3><span class="">Let’s explore the possibility of a partnership</span></h3>
-                        <div class="jg_bottom_gitbtn"><a class="jg_bottom_cta jg_click_popup" style="pointer-events: auto;">Get In Touch</a>
-                        </div>
-                    </div>
-                </section>
+                </script>  
+               
 
             </div>
         </article>
