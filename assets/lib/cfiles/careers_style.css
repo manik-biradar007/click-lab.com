@@ -1085,13 +1085,13 @@ p > a:focus,
     width: 100%;
     height: 130px;
 }
-
+/* 
 .application .application-question select,
 .application .application-additional select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-}
+} */
 
 .application .required {
     display: inline-block;
